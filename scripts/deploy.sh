@@ -1,12 +1,12 @@
 #!/bin/bash
 
 echo ">>> build 파일 검색"
-BUILD_PATH=$(ls /home/ubuntu/CICD-Practice/cicd-0.0.1-SNAPSHOT.jar)
+BUILD_PATH=$(ls /home/ubuntu/app/cicd-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_PATH)
 echo "> build 파일명: $JAR_NAME"
 
 echo "> build 파일 복사"
-DEPLOY_PATH=/home/ubuntu/CICD-Practice/nonstop/jar/
+DEPLOY_PATH=/home/ubuntu/app/nonstop/jar/
 cp $BUILD_PATH $DEPLOY_PATH
 
 echo "> 현재 구동중인 포트 확인 (8080 or 8081 중 UP인 포트 찾기)"
