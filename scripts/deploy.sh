@@ -70,5 +70,5 @@ for retry_count in {1..10}; do
   sleep 10
 done
 
-echo "> 스위칭 실행"
-/home/ubuntu/CICD-Practice/nonstop/switch.sh
+echo "> 스위칭 실행 (port: $IDLE_PORT)"
+/home/ubuntu/app/nonstop/switch.sh $IDLE_PORT
