@@ -12,8 +12,8 @@ permissions:
     owner: ubuntu
     group: ubuntu
 
-hook:
+hooks:
   AfterInstall:
-    - location: /nonstop/deploy.sh
+    - location: nonstop/deploy.sh
       timeout: 60
       runas: ubuntu
