@@ -19,6 +19,13 @@ jobs:
           distribution: 'corretto'
           cache: gradle
 
+      # 아래 과정은 실습을 위해 생략합니다
+      # 실제 서버 배포 시 환경 설정 파일은 CI/CD 과정에서 생성해주어야 합니다
+      # - name: 🛠️ Create application.yml from secrets
+      #   run: |
+      #     mkdir -p ./src/main/resources
+      #     echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
+
       - name: 🤝 Grant execute permission for gradlew
         run: chmod +x ./gradlew
         shell: bash
