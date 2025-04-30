@@ -13,6 +13,11 @@ permissions:
     group: ubuntu
 
 hooks:
+  BeforeInstall:
+    - location: nonstop/permission.sh
+      timeout: 30
+      runas: ubuntu
+
   AfterInstall:
     - location: nonstop/deploy.sh
       timeout: 60
