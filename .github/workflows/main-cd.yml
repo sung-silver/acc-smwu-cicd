@@ -35,6 +35,7 @@ jobs:
           cp ./appspec.yml ./deploy/
           cp ./scripts/deploy.sh ./deploy/nonstop/
           cp ./scripts/switch.sh ./deploy/nonstop
+          cp ./scripts/permission.sh ./deploy/nonstop
 
       - name: Make zip file
         run: zip -r acc_deploy.zip ./deploy
